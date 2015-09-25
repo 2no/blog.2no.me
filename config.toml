@@ -1,0 +1,10 @@
+baseurl = "http://blog.2no.me/"
+languageCode = "ja"
+title = "blog.2no.me"
+author = "2no"
+
+[params]
+  logo      = "/images/img.jpg"
+  copyright = "2no All rights reserved."
+  twitter   = "https://twitter.com/wakuworks"
+  github    = "https://github.com/wakuworks/"

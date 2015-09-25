@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog.2no.me</title>
+    <link>http://blog.2no.me/</link>
+    <description>Recent content on blog.2no.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <atom:link href="http://blog.2no.me/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
