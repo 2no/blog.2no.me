@@ -1,6 +1,6 @@
 +++
 date = "2015-09-25T15:18:52+09:00"
-draft = true
+draft = false
 title = "Hugo 事始め"
 
 +++
