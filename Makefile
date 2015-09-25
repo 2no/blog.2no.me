@@ -4,10 +4,10 @@ theme=$(or $(HUGO_THEME), '')
 override title:=`echo $(title) | tr "A-Z" "a-z" | tr " " "-" | sed "s/\.//g"`
 
 preview-draft:
-	hugo server --bind=$(bind) --port=$(port) --theme=$(theme) -D
+	hugo server --bind=$(bind) --port=$(port) --theme=$(theme) -w -D
 
 preview:
-	hugo server --bind=$(bind) --port=$(port) --theme=$(theme)
+	hugo server --bind=$(bind) --port=$(port) --theme=$(theme) -w
 
 new:
-	hugo new post/"`date +%Y/%m`/$(title).md"
+	@hugo new post/"`date +%Y/%m`/$(title).md"

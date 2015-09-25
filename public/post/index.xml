@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on blog.2no.me</title>
+    <link>http://localhost:9000/post/</link>
+    <description>Recent content in Posts on blog.2no.me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 25 Sep 2015 15:18:52 +0900</lastBuildDate>
+    <atom:link href="http://localhost:9000/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo 事始め</title>
+      <link>http://localhost:9000/post/2015/09/getting-started/</link>
+      <pubDate>Fri, 25 Sep 2015 15:18:52 +0900</pubDate>
+      
+      <guid>http://localhost:9000/post/2015/09/getting-started/</guid>
+      <description>&lt;p&gt;はてなブログがあんまり重いんで、&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; でメモを書くことにした。&lt;br /&gt;
+導入も簡単だし、高速。かなり快適になった。&lt;/p&gt;
+
+&lt;p&gt;ちょっとずつ変えていく予定。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wakuworks/blog.2no.me&#34;&gt;https://github.com/wakuworks/blog.2no.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[参考]&lt;br /&gt;
+&lt;a href=&#34;http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した | Unresolved&lt;/a&gt;
+&lt;a href=&#34;http://rakuishi.com/archives/hugo-zen/&#34;&gt;Hugo Zen: これから Hugo を始める人向けのミニマムなテーマを作りました - rakuishi.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
