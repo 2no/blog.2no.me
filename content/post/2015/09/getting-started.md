@@ -13,5 +13,5 @@ title = "Hugo 事始め"
 https://github.com/wakuworks/blog.2no.me
 
 [参考]  
-[ブログをOctopressからHugoに移行した | Unresolved](http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/)
+[ブログをOctopressからHugoに移行した | Unresolved](http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/)  
 [Hugo Zen: これから Hugo を始める人向けのミニマムなテーマを作りました - rakuishi.com](http://rakuishi.com/archives/hugo-zen/)
