@@ -6,8 +6,71 @@
     <description>Recent content on blog.2no.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Sep 2015 15:18:52 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2015 14:48:22 +0900</lastBuildDate>
     <atom:link href="http://blog.2no.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Windows 環境下で otto が正しく機能しない</title>
+      <link>http://blog.2no.me/post/2015/09/otto/</link>
+      <pubDate>Wed, 30 Sep 2015 14:48:22 +0900</pubDate>
+      
+      <guid>http://blog.2no.me/post/2015/09/otto/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://ottoproject.io&#34;&gt;otto&lt;/a&gt; とは、最近 HashiCorp から発表されたプロダクト。&lt;br /&gt;
+早速試してみたのだが、環境によってうまく動かない場合があった。&lt;/p&gt;
+
+&lt;p&gt;▼環境&lt;br /&gt;
+Windows 10&lt;br /&gt;
+Cygwin
+otto 0.1.1&lt;/p&gt;
+
+&lt;p&gt;▼ディレクトリ構成・ファイル内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;project
+├── Appfile [*1]
+└── mongodb
+    ├── .ottoid
+    └── Appfile [*2]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*1 /project/Appfile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;application {
+  name = &amp;quot;example&amp;quot;
+  type = &amp;quot;ruby&amp;quot;
+
+  dependency { source = &amp;quot;./mongodb&amp;quot; }
+}
+
+customization &amp;quot;ruby&amp;quot; {
+  ruby_version = &amp;quot;2.0&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;*2 /project/mongodb/Appfile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;application {
+    name = &amp;quot;mongodb&amp;quot;
+    type = &amp;quot;docker-external&amp;quot;
+}
+
+customization &amp;quot;docker&amp;quot; {
+    image = &amp;quot;mongo:3.0&amp;quot;
+    run_args = &amp;quot;-p 27017:27017&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;▼コンパイル実行結果&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ otto compile
+==&amp;gt; Loading Appfile...
+==&amp;gt; Fetching all Appfile dependencies...
+    Fetching dependency: file://C:/Users/hoge/project/mongodb
+    Error compiling Appfile: error downloading module &#39;file://C:/Users/hoge/project/mongodb&#39;: symlink C:\Users\hoge\project\mongodb C:\Users\hoge\project\.otto\appfile\deps\xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: A required privilege is not held by the client.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;file://&lt;/code&gt; となっているのが原因かはわからないが、linux 上で実行すると &lt;code&gt;file:///&lt;/code&gt; なり、エラーは起きない&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo 事始め</title>

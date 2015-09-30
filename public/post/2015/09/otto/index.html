@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.15-DEV" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="blog.2no.me">
+<title>Windows 環境下で otto が正しく機能しない - blog.2no.me</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/img.jpg" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">Windows 環境下で otto が正しく機能しない</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2015-09-30">September 30, 2015</time></span>
+			<section itemprop="entry-text">
+				<p><a href="http://ottoproject.io">otto</a> とは、最近 HashiCorp から発表されたプロダクト。<br />
+早速試してみたのだが、環境によってうまく動かない場合があった。</p>
+
+<p>▼環境<br />
+Windows 10<br />
+Cygwin
+otto 0.1.1</p>
+
+<p>▼ディレクトリ構成・ファイル内容</p>
+
+<pre><code>project
+├── Appfile [*1]
+└── mongodb
+    ├── .ottoid
+    └── Appfile [*2]
+</code></pre>
+
+<p>*1 /project/Appfile</p>
+
+<pre><code>application {
+  name = &quot;example&quot;
+  type = &quot;ruby&quot;
+
+  dependency { source = &quot;./mongodb&quot; }
+}
+
+customization &quot;ruby&quot; {
+  ruby_version = &quot;2.0&quot;
+}
+</code></pre>
+
+<p>*2 /project/mongodb/Appfile</p>
+
+<pre><code>application {
+    name = &quot;mongodb&quot;
+    type = &quot;docker-external&quot;
+}
+
+customization &quot;docker&quot; {
+    image = &quot;mongo:3.0&quot;
+    run_args = &quot;-p 27017:27017&quot;
+}
+</code></pre>
+
+<p>▼コンパイル実行結果</p>
+
+<pre><code>$ otto compile
+==&gt; Loading Appfile...
+==&gt; Fetching all Appfile dependencies...
+    Fetching dependency: file://C:/Users/hoge/project/mongodb
+    Error compiling Appfile: error downloading module 'file://C:/Users/hoge/project/mongodb': symlink C:\Users\hoge\project\mongodb C:\Users\hoge\project\.otto\appfile\deps\xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: A required privilege is not held by the client.
+</code></pre>
+
+<p><code>file://</code> となっているのが原因かはわからないが、linux 上で実行すると <code>file:///</code> なり、エラーは起きない</p>
+
+			</section>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			
+			<a href="https://twitter.com/wakuworks" target="_blank">Twitter</a></span>
+			
+			<a href="https://github.com/wakuworks/" target="_blank">GitHub</a></span>
+		</div>
+		<div class="copyright">Copyright &copy; 2no All rights reserved.</div>
+	</footer>
+
+</div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
