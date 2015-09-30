@@ -1,6 +1,6 @@
 +++
 date = "2015-09-30T14:48:22+09:00"
-draft = false
+draft = true
 title = "Windows 環境下で otto が正しく機能しない"
 
 +++
