@@ -10,7 +10,7 @@ title = "Windows 環境下で otto が正しく機能しない"
 
 ▼環境  
 Windows 10  
-Cygwin
+Cygwin  
 otto 0.1.1
 
 ▼ディレクトリ構成・ファイル内容
