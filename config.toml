@@ -2,6 +2,7 @@ baseurl = "http://blog.2no.me/"
 languageCode = "ja"
 title = "blog.2no.me"
 author = "2no"
+disqusShortname = "2no"
 
 [params]
   logo      = "/images/img.jpg"
