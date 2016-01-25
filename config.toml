@@ -5,8 +5,8 @@ author = "2no"
 disqusShortname = "2no"
 
 [params]
-  logo      = "/images/img.jpg"
-  copyright = "2no All rights reserved."
-  twitter   = "https://twitter.com/wakuworks"
-  github    = "https://github.com/wakuworks/"
-  analytics = "UA-11045060-4"
+  logo       = "/images/img.jpg"
+  copyright  = "2no All rights reserved."
+  twitter    = "https://twitter.com/wakuworks"
+  github     = "https://github.com/wakuworks/"
+  tagmanager = "GTM-P4B6RC"
