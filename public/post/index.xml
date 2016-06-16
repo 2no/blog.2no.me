@@ -6,8 +6,21 @@
     <description>Recent content in Posts on blog.2no.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 Jun 2016 17:16:46 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jun 2016 19:28:12 +0900</lastBuildDate>
     <atom:link href="http://blog.2no.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>chest.js の golang 版</title>
+      <link>http://blog.2no.me/post/2016/06/go-chest/</link>
+      <pubDate>Thu, 16 Jun 2016 19:28:12 +0900</pubDate>
+      
+      <guid>http://blog.2no.me/post/2016/06/go-chest/</guid>
+      <description>&lt;p&gt;そういえば、だいぶ前に &lt;a href=&#34;http://chestjs.com&#34;&gt;chest.js&lt;/a&gt; の golang 版作った。&lt;br /&gt;
+使い方は基本的には chest.js と同じ…だと思う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/wakuworks/chest&#34;&gt;https://github.com/wakuworks/chest&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>AWS Summit Tokyo 2016 に参加してきた</title>
