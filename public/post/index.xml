@@ -6,8 +6,24 @@
     <description>Recent content in Posts on blog.2no.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 16 Jun 2016 19:28:12 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2016 16:20:09 +0900</lastBuildDate>
     <atom:link href="http://blog.2no.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub にデジタル署名のバッチを表示させてみた</title>
+      <link>http://blog.2no.me/post/2016/07/github-gpg/</link>
+      <pubDate>Mon, 04 Jul 2016 16:20:09 +0900</pubDate>
+      
+      <guid>http://blog.2no.me/post/2016/07/github-gpg/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/prince_0203/items/ef0e12f2f6d150ff0485&#34;&gt;GitHubでGPGによりデジタル署名されたコミットにバッジが表示されるようになったので設定してみる - Qiita&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記を参考に、Mac 10.11.5 と CentOS 6.8 で対応してみた。&lt;/p&gt;
+
+&lt;p&gt;自分用の開発サーバ（CentOS 6.8）では、コミットの度にパスワードを求められたので、下のページを参考にしたら幸せになった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.bgbgbg.net/archives/4063&#34;&gt;GPGを設定してからgit commitしようとするとパスフレーズを求められる &amp;#8211; bgbgbg&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>chest.js の golang 版</title>
