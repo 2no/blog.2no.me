@@ -22,7 +22,7 @@ title = "カスタムドメインな Github Pages を超簡単に SSL 化して�
 
 ## 移行先
 
-できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更する手間が面倒だったので、今回は自分が運用しているサーバに Let's Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。
+できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更するのが手間だったので、今回は自分が運用しているサーバに Let's Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。
 
 ↓ nginx の設定は以下を参考
 <script src="https://gist.github.com/taddev/8872330.js"></script>

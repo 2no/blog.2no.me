@@ -35,7 +35,7 @@
 
 &lt;h2 id=&#34;移行先&#34;&gt;移行先&lt;/h2&gt;
 
-&lt;p&gt;できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更する手間が面倒だったので、今回は自分が運用しているサーバに Let&amp;rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。&lt;/p&gt;
+&lt;p&gt;できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更するのが手間だったので、今回は自分が運用しているサーバに Let&amp;rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。&lt;/p&gt;
 
 &lt;p&gt;↓ nginx の設定は以下を参考
 &lt;script src=&#34;https://gist.github.com/taddev/8872330.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
