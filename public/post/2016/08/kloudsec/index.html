@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.17-DEV" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="blog.2no.me">
+<title>カスタムドメインな Github Pages を超簡単に SSL 化してくれる Kloudsec がサービス終了していた件 - blog.2no.me</title>
+</head>
+<body>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P4B6RC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',"GTM-P4B6RC");</script>
+
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/img.jpg" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">カスタムドメインな Github Pages を超簡単に SSL 化してくれる Kloudsec がサービス終了していた件</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2016-08-13">August 13, 2016</time></span>
+			<section itemprop="entry-text">
+				
+
+<p>当ブログは Github Pages で公開して Kloudsec で SSL 化していたが、その Kloudsec が知らぬ間にサービス終了していた。<br />
+どうやら <sup>8</sup>&frasl;<sub>1</sub> にサービス終了していたらしい。</p>
+
+<p>詳しくは以下に載っている。<br />
+<a href="https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/">Got an email saying that Kloudsec will be shutting down Aug 1st. : webdev</a></p>
+
+<p>サービス終了の理由は、大体こんな感じ？</p>
+
+<ul>
+<li>維持費用は自腹で出してきた</li>
+<li>維持費用は $10000/month 以上と高価</li>
+<li>Kloudsec では資金を稼げない</li>
+</ul>
+
+<p>現時点では移行期間が設けられているのか、連携しているドメインはまだ使える様子</p>
+
+<h2 id="移行先">移行先</h2>
+
+<p>できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更する手間が面倒だったので、今回は自分が運用しているサーバに Let&rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。</p>
+
+<p>↓ nginx の設定は以下を参考
+<script src="https://gist.github.com/taddev/8872330.js"></script></p>
+
+<p>これらの設定のうち、<code>proxy_set_header Host $host;</code> があると github.io の 404 ページが表示されるので削除した。</p>
+
+			</section>
+			<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '2no';
+    var disqus_identifier = 'http:\/\/blog.2no.me\/post\/2016\/08\/kloudsec\/';
+    var disqus_title = 'カスタムドメインな Github Pages を超簡単に SSL 化してくれる Kloudsec がサービス終了していた件';
+    var disqus_url = 'http:\/\/blog.2no.me\/post\/2016\/08\/kloudsec\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			
+			<a href="https://twitter.com/wakuworks" target="_blank">Twitter</a>
+			
+			<a href="https://github.com/wakuworks/" target="_blank">GitHub</a>
+		</div>
+		<div class="copyright">Copyright &copy; </div>
+	</footer>
+
+</div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
+
