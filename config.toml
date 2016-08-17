@@ -3,6 +3,7 @@ languageCode = "ja"
 title = "blog.2no.me"
 author = "2no"
 disqusShortname = "2no"
+publishdir = "docs"
 
 [params]
   logo       = "/images/img.jpg"
