@@ -6,8 +6,11 @@
     <description>Recent content on blog.2no.me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>2no All rights reserved.</copyright>
     <lastBuildDate>Sat, 13 Aug 2016 10:10:18 +0900</lastBuildDate>
-    <atom:link href="http://blog.2no.me/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://blog.2no.me/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>カスタムドメインな Github Pages を超簡単に SSL 化してくれる Kloudsec がサービス終了していた件</title>
@@ -15,33 +18,15 @@
       <pubDate>Sat, 13 Aug 2016 10:10:18 +0900</pubDate>
       
       <guid>http://blog.2no.me/post/2016/08/kloudsec/</guid>
-      <description>
-
-&lt;p&gt;当ブログは Github Pages で公開して Kloudsec で SSL 化していたが、その Kloudsec が知らぬ間にサービス終了していた。&lt;br /&gt;
-どうやら &lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; にサービス終了していたらしい。&lt;/p&gt;
-
-&lt;p&gt;詳しくは以下に載っている。&lt;br /&gt;
-&lt;a href=&#34;https://www.reddit.com/r/webdev/comments/4s3kmf/got_an_email_saying_that_kloudsec_will_be/&#34;&gt;Got an email saying that Kloudsec will be shutting down Aug 1st. : webdev&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;サービス終了の理由は、大体こんな感じ？&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;維持費用は自腹で出してきた&lt;/li&gt;
-&lt;li&gt;維持費用は $10000/month 以上と高価&lt;/li&gt;
-&lt;li&gt;Kloudsec では資金を稼げない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;現時点では移行期間が設けられているのか、連携しているドメインはまだ使える様子&lt;/p&gt;
-
-&lt;h2 id=&#34;移行先&#34;&gt;移行先&lt;/h2&gt;
-
-&lt;p&gt;できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更するのが手間だったので、今回は自分が運用しているサーバに Let&amp;rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。&lt;/p&gt;
-
-&lt;p&gt;↓ nginx の設定は以下を参考
-&lt;script src=&#34;https://gist.github.com/taddev/8872330.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;これらの設定のうち、&lt;code&gt;proxy_set_header Host $host;&lt;/code&gt; があると github.io の 404 ページが表示されるので削除した。&lt;/p&gt;
-</description>
+      <description>当ブログは Github Pages で公開して Kloudsec で SSL 化していたが、その Kloudsec が知らぬ間にサービス終了していた。
+どうやら 8&amp;frasl;1 にサービス終了していたらしい。
+詳しくは以下に載っている。
+Got an email saying that Kloudsec will be shutting down Aug 1st. : webdev
+サービス終了の理由は、大体こんな感じ？
+ 維持費用は自腹で出してきた 維持費用は $10000/month 以上と高価 Kloudsec では資金を稼げない  現時点では移行期間が設けられているのか、連携しているドメインはまだ使える様子
+移行先 できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更するのが手間だったので、今回は自分が運用しているサーバに Let&amp;rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。
+↓ nginx の設定は以下を参考 
+これらの設定のうち、proxy_set_header Host $host; があると github.io の 404 ページが表示されるので削除した。</description>
     </item>
     
     <item>
@@ -50,14 +35,10 @@
       <pubDate>Mon, 04 Jul 2016 16:20:09 +0900</pubDate>
       
       <guid>http://blog.2no.me/post/2016/07/github-gpg/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://qiita.com/prince_0203/items/ef0e12f2f6d150ff0485&#34;&gt;GitHubでGPGによりデジタル署名されたコミットにバッジが表示されるようになったので設定してみる - Qiita&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;上記を参考に、Mac 10.11.5 と CentOS 6.8 で対応してみた。&lt;/p&gt;
-
-&lt;p&gt;自分用の開発サーバ（CentOS 6.8）では、コミットの度にパスワードを求められたので、下のページを参考にしたら幸せになった。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.bgbgbg.net/archives/4063&#34;&gt;GPGを設定してからgit commitしようとするとパスフレーズを求められる &amp;#8211; bgbgbg&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>GitHubでGPGによりデジタル署名されたコミットにバッジが表示されるようになったので設定してみる - Qiita
+上記を参考に、Mac 10.11.5 と CentOS 6.8 で対応してみた。
+自分用の開発サーバ（CentOS 6.8）では、コミットの度にパスワードを求められたので、下のページを参考にしたら幸せになった。
+GPGを設定してからgit commitしようとするとパスフレーズを求められる &amp;#8211; bgbgbg</description>
     </item>
     
     <item>
@@ -66,11 +47,9 @@
       <pubDate>Thu, 16 Jun 2016 19:28:12 +0900</pubDate>
       
       <guid>http://blog.2no.me/post/2016/06/go-chest/</guid>
-      <description>&lt;p&gt;そういえば、だいぶ前に &lt;a href=&#34;http://chestjs.com&#34;&gt;chest.js&lt;/a&gt; の golang 版作った。&lt;br /&gt;
-使い方は基本的には chest.js と同じ…だと思う。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/wakuworks/chest&#34;&gt;https://github.com/wakuworks/chest&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>そういえば、だいぶ前に chest.js の golang 版作った。
+使い方は基本的には chest.js と同じ…だと思う。
+https://github.com/wakuworks/chest</description>
     </item>
     
     <item>
@@ -79,10 +58,8 @@
       <pubDate>Sat, 04 Jun 2016 17:16:46 +0900</pubDate>
       
       <guid>http://blog.2no.me/post/2016/06/aws-summit-tokyo-2016/</guid>
-      <description>&lt;p&gt;その時のまとめ&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/wakuworks/be374370902eb6624419a55a2235c621.js&#34;&gt;&lt;/script&gt;
-</description>
+      <description>その時のまとめ
+ </description>
     </item>
     
     <item>
@@ -91,17 +68,13 @@
       <pubDate>Fri, 25 Sep 2015 15:18:52 +0900</pubDate>
       
       <guid>http://blog.2no.me/post/2015/09/getting-started/</guid>
-      <description>&lt;p&gt;はてなブログがあんまり重いんで、&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; でメモを書くことにした。&lt;br /&gt;
-導入も簡単だし、高速。かなり快適になった。&lt;/p&gt;
-
-&lt;p&gt;ちょっとずつ変えていく予定。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/wakuworks/blog.2no.me&#34;&gt;https://github.com/wakuworks/blog.2no.me&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[参考]&lt;br /&gt;
-&lt;a href=&#34;http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した | Unresolved&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://rakuishi.com/archives/hugo-zen/&#34;&gt;Hugo Zen: これから Hugo を始める人向けのミニマムなテーマを作りました - rakuishi.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>はてなブログがあんまり重いんで、Hugo でメモを書くことにした。
+導入も簡単だし、高速。かなり快適になった。
+ちょっとずつ変えていく予定。
+https://github.com/wakuworks/blog.2no.me
+[参考]
+ブログをOctopressからHugoに移行した | Unresolved
+Hugo Zen: これから Hugo を始める人向けのミニマムなテーマを作りました - rakuishi.com</description>
     </item>
     
   </channel>
