@@ -8,6 +8,6 @@ publishdir = "docs"
 [params]
   logo       = "/images/img.jpg"
   copyright  = "2no All rights reserved."
-  twitter    = "https://twitter.com/wakuworks"
+  twitter    = "https://twitter.com/_2_no"
   github     = "https://github.com/2no/"
   tagmanager = "GTM-P4B6RC"
