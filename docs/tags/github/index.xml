@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on blog.2no.me</title><link>http://blog.2no.me/tags/github/</link><description>Recent content in Github on blog.2no.me</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sat, 13 Aug 2016 10:10:18 +0900</lastBuildDate><atom:link href="http://blog.2no.me/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>カスタムドメインな Github Pages を超簡単に SSL 化してくれる Kloudsec がサービス終了していた件</title><link>http://blog.2no.me/post/2016/08/kloudsec/</link><pubDate>Sat, 13 Aug 2016 10:10:18 +0900</pubDate><guid>http://blog.2no.me/post/2016/08/kloudsec/</guid><description>当ブログは Github Pages で公開して Kloudsec で SSL 化していたが、その Kloudsec が知らぬ間にサービス終了していた。
+どうやら 8/1 にサービス終了していたらしい。
+詳しくは以下に載っている。
+Got an email saying that Kloudsec will be shutting down Aug 1st. : webdev
+サービス終了の理由は、大体こんな感じ？
+維持費用は自腹で出してきた 維持費用は $10000/month 以上と高価 Kloudsec では資金を稼げない 現時点では移行期間が設けられているのか、連携しているドメインはまだ使える様子
+移行先 できるだけお金を使わずに簡単に済ますなら CloudFlare という選択肢があるが、ネームサーバを変更するのが手間だったので、今回は自分が運用しているサーバに Let&amp;rsquo;s Encrypt の SSL 証明書を入れ、nginx で Github Pages をリバースプロキシして対応した。
+↓ nginx の設定は以下を参考
+これらの設定のうち、proxy_set_header Host $host; があると github.io の 404 ページが表示されるので削除した。</description></item></channel></rss>
