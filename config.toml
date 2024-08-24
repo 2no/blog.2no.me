@@ -4,6 +4,7 @@ title = "blog.2no.me"
 author = "2no"
 disqusShortname = "2no"
 publishdir = "docs"
+theme = "lost"
 
 [params]
   logo       = "/images/img.jpg"
